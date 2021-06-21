@@ -1,189 +1,164 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh">
-	<head>
-	<meta charset="utf-8">
-	<title>拾惠</title>
-		<!--Java-->
-		<script>
-		function MM_popupMsg(msg) { //v1.0
-			 alert(msg);
-		}
-		</script>
-		<!--属性设置-->
-		<style>
-		 <!--
-			* {
-			  box-sizing: border-box;
-			}
-
-			body {
-			  font-family: Arial;
-			  padding: 10px;
-			  background: white;
-			  background-image: url("2.jpg") ;
-			  background-position: center; 
-			  background-repeat: no-repeat; 
-			  background-attachment: fixed;
-			}
-
-			/*头部*/
-			.header {
-			  padding: 30px;
-			  text-align: center;
-			  background:rgba(255,255,255,0.6);
-			}
-
-			.header h1 {
-			  font-size: 50px;
-			}
-
-			/* 导航条 */
-			.topnav {
-			  overflow: hidden;
-			  background:rgba(0,0,0,0.4);
-			}
-
-			/* 导航条链接 */
-			.topnav a {
-			  float: left;
-			  display: block;
-			  color: #f2f2f2;
-			  text-align: center;
-			  padding: 14px 16px;
-			  text-decoration: none;
-			}
-
-			/* 链接颜色修改 */
-			.topnav a:hover {
-			  background-color: #ddd;
-			  color: black;
-			}
-
-			/* 创建两列 */
-			/* 左侧栏*/
-			.leftcolumn {   
-			  float: left;
-			  width: 75%;
-			}
-
-			/* 右侧栏 */
-			.rightcolumn {
-			  float: left;
-			  width: 25%;
-			  background:rgba(255,255,255,0.4);
-			  padding-left: 20px;
-			}
-
-			/* 图像部分 */
-			.fakeimg {
-			  background:rgba(255,255,255,0);
-			  width: 100%;
-			  padding: 20px;
-			}
-
-			/* 文章卡片效果 */
-			.card {
-			  background:rgba(255,255,255,0.4);
-			  padding: 20px;
-			  margin-top: 20px;
-			}
-
-			/* 列后面清除浮动 */
-			.row:after {
-			  content: "";
-			  display: table;
-			  clear: both;
-			}
-
-			/* 底部 */
-			.footer {
-			  padding: 20px;
-			  text-align: center;
-			  background:rgba(255,255,255,0.4);
-			  margin-top: 20px;
-			}
-			.article{
-				line-height: 2;
-				font-family:"楷体";
-				text-align: left;
-				font-size: 15px;
-				padding: 20px;
-				color: aliceblue
-			}
-		 -->
-		</style>
-</head>		
-	<body onLoad="MM_popupMsg('你好呀！这是一个测试主页！')">
-	<!--页眉-->
-		<div class="header">
-		  <h1>白云揉碎i</h1>
-		</div>
-		<!--首页-->
-		<div class="topnav">
-		  <a href="http://yikecaoi.xyz">首页</a>
-		  <a href="#">链接1</a>
-		  <a href="#">链接2</a>
-		  <a href="#" style="float:right">登录</a>
-		</div>
-		<!--区块-->
-		<div class="row">
-		  <div class="leftcolumn">  <!--左区块-->
-			<div class="card">      <!--区块卡片-->
-			  <h2>文章标题</h2>
-			  <h5>2021 年 6 月 15日</h5>
-			  <div class="fakeimg">
-				  <p>点击图像展示原图</p>
-				  <a href="4.jpg">
-					<img src="4.jpg" class="" width="800" height="450" alt="本地图片" >
-				  </a>
-			  </div>
-			  <p class="article">要放假啦，终于把作业做完啦！<br>
-				  下辈子当个菌儿<br>
-				  什么都不干<br>
-				  下雨就长起来<br>
-				  长在山上<br>
-				  天天傻乐 <br>
-				  有人把摘我去吃就被毒死<br>
-				  全村吃席。
-				</p>
-			</div>
-		  </div>
-
-		  <div class="rightcolumn">  <!--右区块-->
-			<div class="card">       <!--卡片-->
-			  <h2>关于我</h2>
-			  <div class="fakeimg">
-				  <img src="2.jpg" class="" width="160" height="90" alt="本地图片" >
-				</div>
-			  <p>这是一个GitHub上的数据库，再弄了一个域名。</p>
-			</div>
-			<div class="card">
-			  <h3>热门文章</h3>
-			  <div class="fakeimg"><p>图片</p>
-				  <img src="1.jpg" class="" width="160" height="90" alt="本地图片" >
-			  </div>
-			  <div class="fakeimg"><p>图片</p>
-				  <img src="2.jpg" class="" width="160" height="90" alt="本地图片" >
-				</div>
-			  <div class="fakeimg"><p>图片</p>
-				  <img src="3.jpg" class="" width="160" height="90" alt="本地图片" >
-				</div>
-			</div>
-			<div class="card">
-			  <h3>关注我</h3>
-			  <p>关注也没糖吃。</p>
-			</div>
-		  </div>
-		</div>
-
-		<div class="footer">
-		  <h2>底部区域</h2>
-			<audio controls="controls" autoplay="autoplay"><!--自动播放BGM-->
-			  <source src="安河桥.mp3" type="audio/mpeg" />
-			Your browser does not support the audio element.
-			</audio>
-		</div>
-
-	</body>
+<head>
+<meta charset="utf-8">
+<title>中国国宝-熊猫</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="row">
+  <div class="header"><!--header-->
+    <h1><span style="cursor: pointer">中国大熊猫</span></h1><br>
+    <!--鼠标样式更改--> 
+  </div>
+  <div class="boxone"><!--第一块--> 
+    <br>
+    <div class="center">
+      <nav id="nav"><!--导航-->
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="xmsj.html">熊猫世界</a></li>
+          <li><a href="xmyj.html">熊猫研究</a></li>
+          <li><a href="xmwj.html">熊猫外交</a></li>
+          <li><a href="dl.html">登录</a></li>
+        </ul>
+      </nav>
+    </div>
+    <br>
+    <div class="boxtwo">
+      <div> <img src="img/xm9.jpeg"  alt="图片1"> </div>
+      <div class="card"><!--card-->
+        <p class="first">中国国宝-大熊猫</p>
+        <p>大熊猫（学名：Ailuropoda melanoleuca）：属于食肉目、熊科、大熊猫亚科和大熊猫属唯一的哺乳动物。<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;大熊猫仅有二个亚种。雄性个体稍大于雌性。体型肥硕似熊、丰腴富态，头圆尾短，头躯长1.2-1.8米，尾长10-12厘米。体重80-120千克，最重可达180千克，体色为黑白两色，脸颊圆，有很大的黑眼圈，标志性的内八字的行走方式，也有解剖刀般锋利的爪子。大熊猫皮肤厚，最厚处可达10毫米。黑白相间的外表，有利于隐蔽在密林的树上和积雪的地面而不易被天敌发现。</p>
+      </div>
+    </div>
+  </div>
+  <!--第一块末--> 
+  <br>
+  <br>
+  <hr>
+  <p class="head">-----走进大熊猫-----</p>
+  <br>
+  <div class="boxthree"><!--第二模块--><!--三个卡片-->
+    <div class="leftcolumn"> <img src="img/xm10.jpeg" alt="图片">
+      <p>大熊猫栖于中国长江上游的高山深谷，为东南季风的迎风面，气候温凉潮湿，其湿度常在80%以上，它们是一种喜湿性动物。大熊猫生活的6块狭长地带，包括岷山、邛崃山、凉山、大相岭及秦岭等几大山系，横跨川、陕、甘3省，种群数量约1600只，其中80%以上分布于四川境内。</p>
+    </div>
+    <div class="middlecolumn"> <img src="img/xm6.jpeg" alt="图片">
+      <p>大熊猫每天除去一半进食的时间，剩下的一半时间多数便是在睡梦中度过。在野外，大熊猫在每两次进食的中间睡2～4个小时，平躺、侧躺、俯卧，伸展或蜷成一团都是它们喜好的睡觉方式。在动物园里面，饲养员每天两次定时给它们喂食，所以大熊猫其他的时间都用来休息。</p>
+    </div>
+    <div class="rightcolumn"> <img src="img/xm7.JPEG" alt="图片">
+      <p>大熊猫善于爬树，也爱嬉戏。爬树的行为一般是临近求婚期，或逃避危险，或彼此相遇时弱者借以回避强者的一种方式。熊猫有时还下到山谷，串入到山村小寨或住宅，把锅盆桶具，尤其是圆形的器皿当成玩具，玩耍后弃置山野。有时它们还和家养牲畜亲善，随着同吃同住。</p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <hr>
+  <br>
+  <p class="head">-----大熊猫研究-----</p>
+  <br>
+  <div class="boxthree"><!--第二模块二部分--><!--三个卡片-->
+    <div class="leftcolumn"> <img src="img/xm1.jpeg" alt="图片">
+      <p>2001年12月由上海科技教育出版社出版的图书《大熊猫研究》，作者是胡锦矗。这本书主要介绍了大熊猫的历史记载、形态习性、栖息环境、活动、繁殖、数量与分布、起源演化、饲养繁殖与保护管理，是迄今最为系统全面介绍大熊猫的一部专著。</p>
+    </div>
+    <div class="middlecolumn"> <img src="img/xm5.jpg" alt="图片">
+      <p>1987年建立成都大熊猫繁育研究基地，是中国政府实施大熊猫等濒危野生动物迁地保护工程的主要研究基地之一，国家4A级景区。
+        
+        是中国乃至全球知名的集大熊猫科研繁育、保护教育、教育旅游、熊猫文化建设为一体的大熊猫等珍稀濒危野生动物保护研究机构。</p>
+    </div>
+    <div class="rightcolumn"> <img src="img/xm8.jpeg" alt="图片">
+      <p>2020年4月，西华师范大学发布关于大熊猫保护的最新研究成果：大熊猫面部识别技术。据悉，目前该技术主要针对圈养大熊猫，可为各只大熊猫建立专属ID，既方便工作人员管理，也方便游客们对每只熊猫的识别、了解。实验也将面向野生大熊猫展开。</p>
+    </div>
+  </div>
+  <!--第二模块末--> 
+  <br>
+  <br>
+  <hr>
+  <br>
+  <p class="head">-----大熊猫外交-----</p>
+  <br>
+  <div class="boxfour"><!--第三模块-->
+    <h1 class="head"></h1>
+    <br>
+    <div class="left">
+      <div class="kuang"> <img src="img/xmly.jpg" alt="图片"> </div>
+      <p>最著名的“熊猫外交”发生在1972年。时值尼克松访华，中美关系解冻，周恩来宣布将大熊猫“玲玲”和“兴兴”作为友谊大使赠送给美国。当“玲玲”和“兴兴”乘专机抵达华盛顿国家动物园时，受到8000名美国观众的冒雨迎接。开馆与观众见面第一个月，参观者就多达100余万。</p>
+    </div>
+    <div class="right">
+      <div class="kuang"> <img src="img/xmwj.jpg" alt="图片"> </div>
+      <p>从20世纪50年代开始，中国政府推行“熊猫外交”，以政府和人民的名义将大熊猫作为国礼赠与那些与中国保持良好关系和中国希望与之建立关系的国家或地区，先后有苏联、朝鲜、美国、英国、法国、德国、日本、西班牙及墨西哥9个国家接受过来自中国的23只熊猫。</p>
+    </div>
+  </div>
+  <!--第三模块末--> 
+  <br>
+  <br>
+  <hr>
+  <br>
+  <div class="boxfive"><!--底部--><!--分三栏，关于、介绍、联系--> 
+    <br>
+    <div class="footr">
+      <ul>
+        <p><big>了解更多</big></p>
+        <hr>
+        <li>
+          <p><a href="xmsj.html">熊猫世界</a></p>
+        </li>
+        <hr>
+        <li>
+          <p><a href="xmyj.html">熊猫研究</a></p>
+        </li>
+        <hr>
+        <li>
+          <p><a href="xmwj.html">熊猫外交</a></p>
+        </li>
+        <hr>
+      </ul>
+    </div>
+    <div class="footm">
+      <ul>
+        <p><big>关于我们</big></p>
+        <hr>
+        <li>
+          <p><a href="wzjs.html">网站介绍</a></p>
+        </li>
+        <hr>
+        <li>
+          <p><a href="zztd.html">制作团队</a></p>
+        </li>
+        <hr>
+        <li>
+          <p><a href="yszc.html">隐私政策</a></p>
+        </li>
+        <hr>
+      </ul>
+    </div>
+    <div class="footl">
+      <ul>
+        <p class="center"><big>联系我们</big></p>
+        <hr>
+        <li>
+          <p>地址：
+            四川省南充市西华师范大学新闻传播学院</p>
+        </li>
+        <hr>
+        <li>
+          <p>邮箱:
+            1690124021@qq.com<a href="mailto:1690124021@qq.com"><img src="img/youxiang.png" alt="邮箱图片" width="20px" title="点击发送邮件！" style="float: right"> </a></p>
+        </li>
+        <hr>
+        <p><big>分享</big></p>
+        <!--嵌入网页分享代码，来源于bshare,远程文件-->
+        <div class="bshare-custom"> &nbsp;&nbsp;&nbsp; <a title="分享到QQ空间" class="bshare-qzone"></a> <a title="分享到新浪微博" class="bshare-sinaminiblog"></a> <a title="分享到人人网" class="bshare-renren"></a> <a title="分享到腾讯微博" class="bshare-qqmb"></a> <a title="分享到网易微博" class="bshare-neteasemb"></a> <a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a> </div>
+        <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/button.js#style=-1&uuid=&pophcol=2&lang=zh"></script> 
+        <a class="bshareDiv" οnclick="javascript:return false;"></a> 
+        <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+        <hr>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
 </html>
