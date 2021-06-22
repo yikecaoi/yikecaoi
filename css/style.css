@@ -11,7 +11,7 @@ body {
 	
 }
 /* 列后面清除浮动 */
-.roqw:after {
+.row:after {
   content: "";
   display: table;
   clear: both;
