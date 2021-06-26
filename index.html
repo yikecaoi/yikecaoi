@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+		<!--下为自适应，未启用-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+		<title>中国国宝-熊猫</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/date.css">
+		<script src="js/echarts.js"></script>
+	</head>
+
+	<body>
+		<div class="row">
+			<div class="header">
+				<!--header-->
+				<h1><span style="cursor: pointer" id="top">中国大熊猫</span></h1><br>
+				<!--鼠标样式更改-->
+			</div>
+			<div class="boxone">
+				<!--第一块-->
+				<br>
+				<div class="center">
+					<nav id="nav">
+						<!--导航-->
+						<ul>
+							<li class="page">
+								<a href="index.html">首页</a>
+							</li>
+							<li>
+								<a href="xmsj.html">熊猫世界</a>
+							</li>
+							<li>
+								<a href="xmyj.html">熊猫研究</a>
+							</li>
+							<li>
+								<a href="xmwj.html">熊猫外交</a>
+							</li>
+							<li>
+								<a href="dl.html">登录</a>
+							</li>
+							<li>
+								<!--引用百度搜索引擎-->
+								<form target="_blank" method="get" action="http://www.baidu.com/s">
+									<input type="text" placeholder="请输入内容..." name="word" class="text" title="这个会转到百度搜索哦！">
+									<input type="submit" value="搜索" class="search" title="这个会转到百度搜索哦！">
+								</form>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<br>
+				<div class="boxtwo">
+					<div> <img src="img/xm9.jpeg" alt="图片1"> </div>
+					<div class="card">
+						<!--card-->
+						<p class="first">大熊猫</p>
+						<p>大熊猫（学名：Ailuropoda melanoleuca）：属于食肉目、熊科、大熊猫亚科和大熊猫属唯一的哺乳动物。<br> &nbsp;&nbsp;&nbsp;&nbsp;大熊猫仅有二个亚种。雄性个体稍大于雌性。体型肥硕似熊、丰腴富态，头圆尾短，头躯长1.2-1.8米，尾长10-12厘米。体重80-120千克，最重可达180千克，体色为黑白两色，脸颊圆，有很大的黑眼圈，标志性的内八字的行走方式，也有解剖刀般锋利的爪子。大熊猫皮肤厚，最厚处可达10毫米。黑白相间的外表，有利于隐蔽在密林的树上和积雪的地面而不易被天敌发现。
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--第一块末-->
+			<br>
+			<br>
+			<hr>
+			<p class="head">-----走进大熊猫-----</p>
+			<br>
+
+			<div class="space">
+
+				<div class="left-p">
+					<img src="img/bxx.JPG" width="100%" alt="宝兴县">
+				</div>
+
+				<div class="right-p">
+					<br>
+					<h1>宝兴县</h1>
+					<br>
+					<p>宝兴县，隶属于四川省雅安市，位于四川省西部，四川盆地西部边缘，总面积3114平方公里， 下辖3镇5乡及硗碛藏族乡，全县人口58335人（2010年末）。宝兴县东邻芦山，南毗天全 ，西连康定，北接小金，东北与汶川交界，距成都200公里。宝兴蜂桶寨是全球首个发现大熊猫 的地方，被誉为“大熊猫的故乡”。
+					</p>
+				</div>
+			</div>
+			<div class="xia">
+				<br><br>
+				<h1>全国大熊猫数量普查</h1><br>
+				<p>全国大熊猫资源普查相当于大熊猫的"人口普查"，1999年至2000年<br>的第三次普查结果显示，我国有野生大熊猫1596只，其中1206只<br>生活在四川。人工圈养大熊猫有161只。</p>
+				<p>2015年2月，中国国家林业局发布全国第四次大熊猫调查结果。<br>中国大熊猫保护取得显著成效，截至2013年底，全国野生大熊猫种群<br>数量达1864只，较第三次调查增长16.8%；栖息地面积达258万公顷，<br>增长11.8%；圈养大熊猫种群数量达到375只。</p>
+
+				<div class="tubiao">
+					<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+					<div id="main1" style="width: 500px;height:400px;"></div>
+					<script type="text/javascript">
+						// 基于准备好的dom，初始化echarts实例
+						var myChart = echarts.init(document.getElementById('main1'));
+
+						// 指定图表的配置项和数据
+						var option = {
+							tooltip: {
+								trigger: "axis",
+								axisPointer: {
+									type: "shadow"
+								}
+							},
+							legend: {
+								data: ["圈养", "野生", "共计"]
+							},
+							toolbox: {
+								show: true,
+								orient: "vertical",
+								x: "right",
+								y: "center",
+								feature: {
+									mark: {
+										show: true
+									},
+									dataView: {
+										show: true,
+										readOnly: true
+									},
+									magicType: {
+										show: false,
+										type: ["line", "bar", "stack", "tiled"]
+									},
+									restore: {
+										show: true
+									},
+									saveAsImage: {
+										show: true
+									}
+								},
+								showTitle: true,
+								textStyle: {
+									fontSize: 12,
+									fontStyle: "normal",
+									fontWeight: "normal"
+								}
+							},
+							calculable: true,
+							xAxis: [{
+								type: "category",
+								data: ["全国第三次大熊猫普查", "全国第四次大熊猫普查"]
+							}],
+							yAxis: [{
+								type: "value"
+							}],
+							series: [{
+									type: "bar",
+									name: "圈养",
+									data: [161, 375]
+								},
+								{
+									type: "bar",
+									name: "野生",
+									data: [1596, 1864]
+								},
+								{
+									type: "bar",
+									name: "共计",
+									data: [1757, 2239]
+								}
+							],
+							animationDuration: 2000,
+							animationEasing: "Linear",
+							calculableColor: "rgba(255,165,0,0.6)",
+							calculableHolderColor: "#ccc",
+							backgroundColor: "rgba(0,0,0,0)",
+							color: ["#ff7f50", "#87cefa", "#da70d6", "#32cd32", "#6495ed", "#ff69b4", "#ba55d3", "#cd5c5c", "#ffa500", "#40e0d0", "#1e90ff", "#ff6347", "#7b68ee", "#00fa9a", "#ffd700", "#6699FF", "#ff6666", "#3cb371", "#b8860b", "#30e0e0"]
+						};
+
+						// 使用刚指定的配置项和数据显示图表。
+						myChart.setOption(option);
+					</script>
+				</div>
+
+			</div><br>
+
+			<div class="boxthree">
+				<!--第二模块-->
+				<!--三个卡片-->
+				<div class="leftcolumn"> <img src="img/xm10.jpeg" alt="图片">
+					<p>大熊猫栖于中国长江上游的高山深谷，为东南季风的迎风面，气候温凉潮湿，其湿度常在80%以上，它们是一种喜湿性动物。大熊猫生活的6块狭长地带，包括岷山、邛崃山、凉山、大相岭及秦岭等几大山系，横跨川、陕、甘3省，种群数量约1600只，其中80%以上分布于四川境内。</p>
+				</div>
+				<div class="middlecolumn"> <img src="img/xm6.jpeg" alt="图片">
+					<p>大熊猫每天除去一半进食的时间，剩下的一半时间多数便是在睡梦中度过。在野外，大熊猫在每两次进食的中间睡2～4个小时，平躺、侧躺、俯卧，伸展或蜷成一团都是它们喜好的睡觉方式。在动物园里面，饲养员每天两次定时给它们喂食，所以大熊猫其他的时间都用来休息。</p>
+				</div>
+				<div class="rightcolumn"> <img src="img/xm7.JPEG" alt="图片">
+					<p>大熊猫善于爬树，也爱嬉戏。爬树的行为一般是临近求婚期，或逃避危险，或彼此相遇时弱者借以回避强者的一种方式。熊猫有时还下到山谷，串入到山村小寨或住宅，把锅盆桶具，尤其是圆形的器皿当成玩具，玩耍后弃置山野。有时它们还和家养牲畜亲善，随着同吃同住。</p>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<hr>
+			<br>
+			<p class="head">-----大熊猫研究-----</p>
+			<br>
+
+			<div class="space">
+
+				<div class="left-p">
+					<img src="img/cddxm.jpeg" width="100%" alt="宝兴县">
+				</div>
+
+				<div class="right-p">
+					<br>
+					<h1>成都大熊猫繁育研究基地</h1>
+					<br>
+					<p>1987年，为了加强对病饿大熊猫的救治管理，将大熊猫的教育展示功能与救护研究功能分离，强化大熊猫科学研究，提高大熊猫繁育水平，成都市人民政府决定建立成都大熊猫繁育研究基地，并与成都动物园实行一套班子，两块牌子。</p>
+				</div>
+			</div>
+			<div class="xia">
+				<br><br>
+				<h1>大熊猫自然保护区</h1><br>
+				<p>自1963年卧龙、王朗、白河、喇叭河最早一批大熊猫<br>自然保护区建立以来，到2014年全国第四次大熊猫“熊口”<br>调查结束， 各级政府共为保护野生大熊猫及其栖息地
+					<br>生物多样性建了67个自然保护区。 这67个大熊猫自然
+					<br>保护区总面积达336万公顷，覆盖了53.8%的大熊猫栖息地，<br>并保护了66.8%的野生大熊猫种群。</p>
+
+				<div class="tubiao">
+					<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+					<div id="main" style="width: 500px;height:400px;"></div>
+					<script type="text/javascript">
+						// 基于准备好的dom，初始化echarts实例
+						var myChart = echarts.init(document.getElementById('main'));
+
+						// 指定图表的配置项和数据
+						var option = {
+							title: {
+								text: ''
+							},
+
+							tooltip: {
+								trigger: "item",
+								formatter: "{a} <br>{b} : {c} ({d}%)"
+							},
+							legend: {
+								orient: "vertical",
+								x: "left",
+								data: ["甘肃 7处", "陕西 14处", "四川 46处", "甘肃 10.45%", "陕西  20.90%", "四川 68.66%"]
+							},
+							toolbox: {
+								feature: {
+									mark: {
+										show: true
+									},
+									dataView: {
+										show: true,
+										readOnly: true
+									},
+									restore: {
+										show: true
+									},
+									saveAsImage: {
+										show: true
+									}
+								},
+								x: "right",
+								show: true
+							},
+							series: [{
+									name: "访问来源",
+									type: "pie",
+									selectedMode: "single",
+									radius: [0, 70],
+									itemStyle: {
+										normal: {
+											label: {
+												position: "inside"
+											},
+											labelLine: {
+												show: false
+											}
+										}
+									},
+									data: [{
+											value: 7,
+											name: "甘肃 7处"
+										},
+										{
+											value: 14,
+											name: "陕西 14处"
+										},
+										{
+											value: 46,
+											name: "四川 46处"
+										}
+									]
+								},
+								{
+									name: "访问来源",
+									type: "pie",
+									radius: [100, 140],
+									data: [{
+											value: 7,
+											name: "甘肃 10.45%"
+										},
+										{
+											value: 14,
+											name: "陕西  20.90%"
+										},
+										{
+											value: 46,
+											name: "四川 68.66%"
+										}
+									]
+								}
+							],
+							color: ["#ff7f50", "rgb(135, 206, 250)", "#da70d6"],
+							animation: true,
+							calculable: true,
+							calculableColor: "rgba(255,165,0,0.6)",
+							calculableHolderColor: "#ccc",
+							animationThreshold: 2000,
+							animationEasing: "QuadraticInOut",
+						};
+
+						// 使用刚指定的配置项和数据显示图表。
+						myChart.setOption(option);
+					</script>
+				</div>
+
+			</div><br>
+
+			<div class="boxthree">
+				<!--第二模块二部分-->
+				<!--三个卡片-->
+				<div class="leftcolumn"> <img src="img/xm1.jpeg" alt="图片">
+					<p>1987年建立成都大熊猫繁育研究基地，是中国政府实施大熊猫等濒危野生动物迁地保护工程的主要研究基地之一，国家4A级景区。 是中国乃至全球知名的集大熊猫科研繁育、保护教育、教育旅游、熊猫文化建设为一体的大熊猫等珍稀濒危野生动物保护研究机构。
+					</p>
+				</div>
+				<div class="middlecolumn"> <img src="img/xm5.jpg" alt="图片">
+					<p>2001年12月由上海科技教育出版社出版的图书《大熊猫研究》，作者是胡锦矗，四川开江人。这本书主要介绍了大熊猫的历史记载、形态习性、栖息环境、活动、繁殖、数量与分布、起源演化、饲养繁殖与保护管理，是迄今最为系统全面介绍大熊猫的一部专著。
+					</p>
+				</div>
+				<div class="rightcolumn"> <img src="img/xm8.jpeg" alt="图片">
+					<p>2020年4月，西华师范大学发布关于大熊猫保护的最新研究成果：大熊猫面部识别技术。据悉，目前该技术主要针对圈养大熊猫，可为各只大熊猫建立专属ID，既方便工作人员管理，也方便游客们对每只熊猫的识别、了解。实验也将面向野生大熊猫展开。</p>
+				</div>
+			</div>
+			<!--第二模块末-->
+			<br>
+			<br>
+			<hr>
+			<br>
+			<p class="head">-----大熊猫外交-----</p>
+			<br>
+
+			<div class="space">
+
+				<div class="left-p">
+					<img src="img/xmwj.png" width="100%" alt="熊猫外交">
+				</div>
+
+				<div class="right-p">
+					<br>
+					<h1>熊猫外交</h1>
+					<br>
+					<p>熊猫是中国的国宝，从唐朝开始，四川的大熊猫就从深山走出，漂洋过海到达世界各大洲的许多角落，充当友好使者，为发展对外友好关系作出了不可磨灭的贡献。据统计，从公元685年到1982年，中国一共向国外赠送了约40只大熊猫。中国主要通过国礼赠送、商业租借和科研合作的方式进行熊猫外交，赠送或长租的对象主要为强国或友好国家。</p>
+				</div>
+			</div><br>
+			<div class="xia">
+				<br><br>
+				<h1>和平特使</h1><br>
+				<p>20世纪50年代，中国开始推行“熊猫外交”，以政府和人民的名义<br>将大熊猫作为国礼赠与那些与中国保持良好关系和中国希望与之<br>建立关系的国家或地区，先后有苏联、朝鲜、美国、英国、法国、德国、<br>日本、西班牙及墨西哥9个国家接受过来自中国的23只熊猫。其中，<br>以1972年尼克松总统访华获赠熊猫，使“熊猫外交”达到高峰。</p>
+				<div class="tubiao">
+					<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+					<div id="main2" style="width: 500px;height:400px;"></div>
+					<script type="text/javascript">
+						// 基于准备好的dom，初始化echarts实例
+						var myChart = echarts.init(document.getElementById('main2'));
+
+						// 指定图表的配置项和数据
+						var option = {
+							title: {
+								text: "",
+								subtext: ""
+							},
+							tooltip: {
+								trigger: "item",
+								show: true,
+								axisPointer: {
+									type: "line"
+								},
+								textStyle: {
+									color: "#fff",
+									fontSize: 12,
+									fontStyle: "normal",
+									fontWeight: "normal",
+									align: "center",
+									baseline: "middle"
+								},
+								backgroundColor: "rgba(0,0,0,0.7)",
+								borderWidth: 0,
+								borderRadius: 4,
+								padding: 5,
+								borderColor: "#333"
+							},
+							legend: {
+								orient: "vertical",
+								x: "right",
+								y: "bottom",
+								data: ["赠送数量"]
+							},
+							toolbox: {
+								show: true,
+								feature: {
+									mark: {
+										show: true
+									},
+									dataView: {
+										show: true,
+										readOnly: false
+									},
+									restore: {
+										show: true
+									},
+									saveAsImage: {
+										show: true
+									}
+								},
+								showTitle: true,
+								textStyle: {
+									fontSize: 12,
+									fontStyle: "normal",
+									fontWeight: "normal"
+								}
+							},
+							polar: [{
+								indicator: [{
+										text: "前苏联",
+										min: 0,
+										max: 5
+									},
+									{
+										text: "朝鲜",
+										min: 0,
+										max: 5
+									},
+									{
+										text: "美国",
+										min: 0,
+										max: 5
+									},
+									{
+										text: "日本",
+										min: 0,
+										max: 5
+									},
+									{
+										text: "法国",
+										min: 0,
+										max: 5
+									},
+									{
+										text: "英国",
+										min: 0,
+										max: 5
+									},
+									{
+										text: "前联邦德国",
+										max: 5
+									},
+									{
+										text: "墨西哥",
+										max: 5
+									},
+									{
+										text: "西班牙",
+										max: 5
+									}
+								],
+								type: "circle",
+								center: ["50%", "50%"],
+								radius: "70%",
+								startAngle: 10,
+								axisLabel: {
+									show: true
+								},
+								splitNumber: 5,
+								axisLine: {
+									show: true,
+									lineStyle: {
+										color: "#ccc",
+										width: 1
+									}
+								}
+							}],
+							series: [{
+								type: "radar",
+								name: "",
+								data: [{
+									value: [2, 5, 2, 4, 2, 2, 2, 2, 2],
+									name: "赠送数量"
+								}],
+								itemStyle: {
+									normal: {
+										color: "#1DBB37"
+									}
+								},
+								markPoint: {
+									data: []
+								},
+								symbol: "circle",
+								symbolSize: 10
+							}]
+						};
+
+						// 使用刚指定的配置项和数据显示图表。
+						myChart.setOption(option);
+					</script>
+				</div>
+			</div>
+
+			<div class="boxfour">
+				<!--第三模块-->
+				<h1 class="head"></h1>
+				<div class="left">
+					<div class="kuang"> <img src="img/xmly.jpg" alt="图片"> </div>
+					<p>最著名的“熊猫外交”发生在1972年。时值尼克松访华，中美关系解冻，周恩来宣布将大熊猫“玲玲”和“兴兴”作为友谊大使赠送给美国。当“玲玲”和“兴兴”乘专机抵达华盛顿国家动物园时，受到8000名美国观众的冒雨迎接。开馆与观众见面第一个月，参观者就多达100余万。</p>
+				</div>
+				<div class="right">
+					<div class="kuang"> <img src="img/xmwj.jpg" alt="图片"> </div>
+					<p>如今仍有一定数量的熊猫被租借到中国以外的地区，但是与往昔不同的是，如今的租借大多是以研究和繁殖为主要目的的长期租借，那些生活在海外的熊猫大多是在人工饲养条件下繁殖的子代或者经人类长期豢养的个体，无论从数量还是从来源考虑，熊猫租借对野生熊猫种群已经不再构成威胁。</p>
+				</div>
+			</div>
+			<!--第三模块末-->
+			<br>
+			<br>
+			<hr>
+			<br>
+			<div class="boxfive">
+				<!--底部-->
+				<!--分三栏，关于、介绍、联系-->
+				<br>
+				<div class="footr">
+					<ul>
+						<p><big>了解更多</big></p>
+						<hr>
+						<li>
+							<p>
+								<a href="xmsj.html">熊猫世界</a>
+							</p>
+						</li>
+						<hr>
+						<li>
+							<p>
+								<a href="xmyj.html">熊猫研究</a>
+							</p>
+						</li>
+						<hr>
+						<li>
+							<p>
+								<a href="xmwj.html">熊猫外交</a>
+							</p>
+						</li>
+						<hr>
+					</ul>
+				</div>
+				<div class="footm">
+					<ul>
+						<p><big>关于我们</big></p>
+						<hr>
+						<li>
+							<p>
+								<a href="wzjs.html">网站介绍</a>
+							</p>
+						</li>
+						<hr>
+						<li>
+							<p>
+								<a href="zztd.html">制作团队</a>
+							</p>
+						</li>
+						<hr>
+						<li>
+							<p>
+								<a href="yszc.html">隐私政策</a>
+							</p>
+						</li>
+						<hr>
+					</ul>
+				</div>
+				<div class="footl">
+					<ul>
+						<p class="center"><big>联系我们</big></p>
+						<hr>
+						<li>
+							<p>地址： 四川省南充市西华师范大学新闻传播学院
+							</p>
+						</li>
+						<hr>
+						<li>
+							<p>邮箱: 1690124021@qq.com
+								<a href="mailto:1690124021@qq.com"><img src="img/youxiang.png" alt="邮箱图片" width="20px" title="点击发送邮件！" style="float: right"> </a>
+							</p>
+						</li>
+						<hr>
+						<p><big>分享</big></p>
+						<!--嵌入网页分享代码，来源于bshare,远程文件-->
+						<div class="bshare-custom"> &nbsp;&nbsp;&nbsp;
+							<a title="分享到QQ空间" class="bshare-qzone"></a>
+							<a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+							<a title="分享到人人网" class="bshare-renren"></a>
+							<a title="分享到腾讯微博" class="bshare-qqmb"></a>
+							<a title="分享到网易微博" class="bshare-neteasemb"></a>
+							<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+						</div>
+						<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/button.js#style=-1&uuid=&pophcol=2&lang=zh"></script>
+						<a class="bshareDiv" οnclick="javascript:return false;"></a>
+						<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+						<hr>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<a href="#top"><img src="img/top.png" alt="返回" class="comeback"></a>
+	</body>
+
+</html>
