@@ -52,7 +52,20 @@
 				</div>
 				<br>
 				<div class="boxtwo">
-					<div> <img src="img/xm9.jpeg" alt="图片1"> </div>
+					<div> <img src="img/1.jpg" alt="图片1" id="image"> </div>
+					
+					<script>
+						var i = 1
+						setInterval(function() {
+							i++;
+							if(i > 3) {
+							i = 1;
+								}
+							document.getElementById("image").src = "img/" + i + ".jpg";
+
+						}, 5000);
+					</script>
+					
 					<div class="card">
 						<!--card-->
 						<p class="first">大熊猫</p>
