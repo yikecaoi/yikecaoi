@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+.box{width:96%;background-image:url("../img/bg01.png"); padding:2%; height:100%;}/*大盒子*/
+p{text-indent: 2em;}/*文字样式*/
+.subheader{text-align: center;
+	padding: 20px;
+	background-image:url("../img/2-2.jpg");
+	background-attachment: fixed;
+	margin-bottom: 10px;
+	height: 350px;
+	opacity: 0.3;
+	background-position: center;
+	background-repeat:no-repeat;
+}/*中间头部*/
+.start{padding: 20px;
+	width: 80%;
+	margin-left:8%;
+}/*开始介绍*/
+.main{padding: 20px;
+	width:90%;
+	margin-left: 3%;
+	height:600px;
+}/*方块大盒子*/
+.littleLeft{padding: 20px;
+	width: 40%;
+	height: 430px;
+	margin-left: 3%;
+	float: left;
+	margin-top:1px;
+	background-color:#D5D5D5;
+}/*左方块儿*/
+.littleRight{padding: 20px;
+	width: 40%;
+	height: 430px;
+	margin-right:3%;
+	float: right;
+	margin-top:1px;
+	background-color:#D5D5D5;
+}/*右方块*/
+.img{text-align:center;
+	margin-bottom: 20px;
+}/*插图盒子*/
+.subLeft{padding:1%;
+	width:30%;
+	float: left;
+	margin-top: 20px;
+	background-color:#D5D5D5;
+	height:535px;
+	padding-bottom:10px;
+}/*尾部左侧盒子*/
+.subMiddle{padding:1%;
+	width:30%;
+	float:left;
+	margin-left:2%;
+	margin-top: 20px;
+	background-color:#D5D5D5;
+	height: 535px;
+	padding-bottom:10px;
+}/*尾部中间盒子*/
+.subRight{padding:1%;
+	width:30%;
+	float:right;
+	margin-top:20px;
+	background-color:#D5D5D5;
+	height: 535px;
+	padding-bottom:10px;
+}/*尾部右侧盒子*/
+
